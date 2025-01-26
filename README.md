@@ -127,6 +127,10 @@ def extract_with_regex(text):
 
 
 ### TASK_3:
+* Implemented FastAPI
+* Accepts an input text prompt.
+* Returns Predicted Labels and Extracted Entities present in the input.
+* 
 
 
 
