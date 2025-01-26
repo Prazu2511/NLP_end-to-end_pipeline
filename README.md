@@ -63,8 +63,8 @@ X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_st
 ```
 
 * A fully connected neural network is used:
-* Input layer, two hidden layers with 512 neurons and ReLU activation function, and an Output layer with sigmoid function.
-* Dropout layer is used to prevent overfitting by randomly deactivating 50% of neurons during training.
+** Input layer, two hidden layers with 512 neurons and ReLU activation function, and an Output layer with sigmoid function.
+** Dropout layer is used to prevent overfitting by randomly deactivating 50% of neurons during training.
 ```python
 model = Sequential()
 model.add(Dense(512, activation='relu', input_dim=X_train.shape[1]))
