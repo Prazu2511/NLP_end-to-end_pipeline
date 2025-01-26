@@ -37,20 +37,20 @@ def random_swap(text, n=1):
 *Logistic Regression with OneVsRestClassifier:*
   * OneVsRestClassifier wraps around Logistic Regression to handle multi-label classification by training one logistic regression model per label but resulted in overfitting.
   
-         ```python
+    ```python
              from sklearn.multiclass import OneVsRestClassifier
              model = OneVsRestClassifier(LogisticRegression(max_iter=1000, random_state=42))
-             ```
+    ```
   
 *Feed Forward Neural Network:*
   
   (i) The dataset (multiclass_calls_dataset_with_rand.csv) where the text labels are converted into numerical features using TF-IDF vectorizer
   
-                  ```python
+```python
                       from sklearn.feature_extraction.text import TfidfVectorizer
                   vectorizer = TfidfVectorizer(stop_words='english', max_features=5000)
                   X = vectorizer.fit_transform(X).toarray()
-                ```
+```
 
   (ii) The MultiLabelBinarizer() converts the labels column (strings) into a binary matrix suitable for multilabel classification i.e. Each label is split by ',' to form a list of             labels for each instance.
 ```python
