@@ -47,15 +47,13 @@ def random_swap(text, n=1):
   (i) The dataset (multiclass_calls_dataset_with_rand.csv) where the text labels are converted into numerical features using TF-IDF vectorizer
   
 ```python
-                      from sklearn.feature_extraction.text import TfidfVectorizer
-                  vectorizer = TfidfVectorizer(stop_words='english', max_features=5000)
-                  X = vectorizer.fit_transform(X).toarray()
+from sklearn.feature_extraction.text import TfidfVectorizer
+                 
 ```
 
   (ii) The MultiLabelBinarizer() converts the labels column (strings) into a binary matrix suitable for multilabel classification i.e. Each label is split by ',' to form a list of             labels for each instance.
 ```python
       mlb = MultiLabelBinarizer()
-      y = mlb.fit_transform([labels.split(", ") for labels in y])  # Convert the labels to binary format
   ```
   
   (iii) Splitting the dataset into 80% training set and 20% testing set.
@@ -90,8 +88,6 @@ X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_st
           * Validation accuracy.
 ```python
           loss, accuracy = model.evaluate(X_val, y_val)
-          print(f"Validation Loss: {loss}")
-          print(f"Validation Accuracy: {accuracy}")
 ```
 
 
