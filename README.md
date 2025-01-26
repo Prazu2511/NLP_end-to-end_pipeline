@@ -103,10 +103,10 @@ loss, accuracy = model.evaluate(X_val, y_val)
 * domain_knowledge.json:
 ```json
 {
-  "competitors": ["CompetitorX", "CompetitorY", "CompetitorZ", "TechCorp", "MediPlus"],
-    "features": ["analytics", "AI engine", "data pipeline", "automation", "remote monitoring, fast delivery, high resolution"],
-    "pricing_keywords": ["discount", "budget", "pricing model", "subscription cost"],
-    "security_keywords": ["SOC2 certified", "data compliance", "encryption", "privacy policy"]
+"competitors": ["CompetitorX", "CompetitorY", "CompetitorZ", "TechCorp", "MediPlus"],
+"features": ["analytics", "AI engine", "data pipeline", "automation", "remote monitoring, fast delivery, high resolution"],
+"pricing_keywords": ["discount", "budget", "pricing model", "subscription cost"],
+"security_keywords": ["SOC2 certified", "data compliance", "encryption", "privacy policy"]
 }
   ```
 * Using an Advanced extraction technique i.e rule-based approach using regex and recognizing patterns
