@@ -82,8 +82,12 @@ model.compile(optimizer=Adam(learning_rate=0.0001), loss='binary_crossentropy', 
 early_stop = EarlyStopping(monitor='val_loss', patience=2, restore_best_weights=True)
 history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_val, y_val), callbacks=[early_stop])
 ```
-  
-(vi) Evaluation of model:
+
+(vi) Cross-Validation:
+image
+
+
+ Evaluation of model:
 * Validation loss (binary_crossentropy).
 * Validation accuracy.
 ```python
