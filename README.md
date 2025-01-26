@@ -3,9 +3,10 @@ This project implements an end-to-end Natural Language Processing (NLP) pipeline
 
 ### PROBLEM STATEMENT : 
 
-1. Building and end-to-end NLP pipeline by:
-2. Creating multi-column dataset and performing multi-label classification
-3. Extracting domain specific entities by combining knowledge base lookup and advanced extraction techniques Providing REST API
+Building and end-to-end NLP pipeline by:
+1. Creating multi-column dataset and performing multi-label classification
+2. Extracting domain specific entities by combining knowledge base lookup and advanced extraction techniques
+3. Providing REST API and Dockerizing.
 
 ### TASK_1:
 
@@ -44,24 +45,24 @@ def random_swap(text, n=1):
 
 *Feed Forward Neural Network:*
   
-(i) The dataset (multiclass_calls_dataset_with_rand.csv) where the text labels are converted into numerical features using TF-IDF vectorizer
+* The dataset (multiclass_calls_dataset_with_rand.csv) where the text labels are converted into numerical features using TF-IDF vectorizer
   
 ```python
 from sklearn.feature_extraction.text import TfidfVectorizer
                  
 ```
 
-(ii) The MultiLabelBinarizer() converts the labels column (strings) into a binary matrix suitable for multilabel classification i.e. Each label is split by ',' to form a list of             labels for each instance.
+* The MultiLabelBinarizer() converts the labels column (strings) into a binary matrix suitable for multilabel classification i.e. Each label is split by ',' to form a list of             labels for each instance.
 ```python
 mlb = MultiLabelBinarizer()
   ```
   
-(iii) Splitting the dataset into 80% training set and 20% testing set.
+* Splitting the dataset into 80% training set and 20% testing set.
 ```python
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 ```
 
-(iv) A fully connected neural network is used:
+* A fully connected neural network is used:
 * Input layer, two hidden layers with 512 neurons and ReLU activation function, and an Output layer with sigmoid function.
 * Dropout layer is used to prevent overfitting by randomly deactivating 50% of neurons during training.
 ```python
@@ -73,7 +74,7 @@ model.add(Dropout(0.5))
 model.add(Dense(y_train.shape[1], activation='sigmoid'))
 ```
   
-(v) Compilation & Training of the model:
+* Compilation & Training of the model:
 * Adam optimizer with learning rate 0.0001 is chosen for it’s adaptive learning capability.
 * Binary Cross Entropy Loss function is used, which is ideal for multi-label classification tasks.
 * Early stopping Monitors the validation loss (val_loss). Stops training if the loss doesn't improve for 2 consecutive epochs (patience=2).
@@ -83,7 +84,7 @@ early_stop = EarlyStopping(monitor='val_loss', patience=2, restore_best_weights=
 history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_val, y_val), callbacks=[early_stop])
 ```
 
-(vi) Cross-Validation:
+* Cross-Validation:
 * The loss is relatively consistent across the folds, with an average loss of 0.294. This suggests the model is learning and the loss isn't varying drastically between folds.
 <img width="509" alt="Screenshot 2025-01-26 at 5 11 53 PM" src="https://github.com/user-attachments/assets/e76b42aa-a05e-450e-b996-f521c49a1c0e" />
 
