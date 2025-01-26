@@ -75,9 +75,9 @@ model.add(Dense(y_train.shape[1], activation='sigmoid'))
 ```
   
 * Compilation & Training of the model:
-* Adam optimizer with learning rate 0.0001 is chosen for it’s adaptive learning capability.
-* Binary Cross Entropy Loss function is used, which is ideal for multi-label classification tasks.
-* Early stopping Monitors the validation loss (val_loss). Stops training if the loss doesn't improve for 2 consecutive epochs (patience=2).
+    - Adam optimizer with learning rate 0.0001 is chosen for it’s adaptive learning capability.
+    - Binary Cross Entropy Loss function is used, which is ideal for multi-label classification tasks.
+    - Early stopping Monitors the validation loss (val_loss). Stops training if the loss doesn't improve for 2 consecutive epochs (patience=2).
 ```python
 model.compile(optimizer=Adam(learning_rate=0.0001), loss='binary_crossentropy', metrics=['accuracy'])
 early_stop = EarlyStopping(monitor='val_loss', patience=2, restore_best_weights=True)
