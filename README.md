@@ -84,7 +84,8 @@ history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data
 ```
 
 (vi) Cross-Validation:
-image
+<img width="304" alt="image" src="https://github.com/user-attachments/assets/61265613-6bb7-4fc9-9cae-20588a434adb" />
+
 
 
 #### 1.4 Evaluation of model:
