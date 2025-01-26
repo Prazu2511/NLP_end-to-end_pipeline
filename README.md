@@ -63,8 +63,8 @@ X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_st
 ```
 
 * A fully connected neural network is used:
-- Input layer, two hidden layers with 512 neurons and ReLU activation function, and an Output layer with sigmoid function.
-- Dropout layer is used to prevent overfitting by randomly deactivating 50% of neurons during training.
+    - Input layer, two hidden layers with 512 neurons and ReLU activation function, and an Output layer with sigmoid function.
+    - Dropout layer is used to prevent overfitting by randomly deactivating 50% of neurons during training.
 ```python
 model = Sequential()
 model.add(Dense(512, activation='relu', input_dim=X_train.shape[1]))
@@ -85,8 +85,8 @@ history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data
 ```
 
 * Cross-Validation:
-* The loss is relatively consistent across the folds, with an average loss of 0.294. This suggests the model is learning and the loss isn't varying drastically between folds.
-<img width="509" alt="Screenshot 2025-01-26 at 5 11 53 PM" src="https://github.com/user-attachments/assets/e76b42aa-a05e-450e-b996-f521c49a1c0e" />
+    - The loss is relatively consistent across the folds, with an average loss of 0.294. This suggests the model is learning and the loss isn't varying drastically between folds.
+    <img width="509" alt="Screenshot 2025-01-26 at 5 11 53 PM" src="https://github.com/user-attachments/assets/e76b42aa-a05e-450e-b996-f521c49a1c0e" />
 
 #### 1.4 Evaluation of model:
 * Validation loss (binary_crossentropy).
