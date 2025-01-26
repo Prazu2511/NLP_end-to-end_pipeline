@@ -90,6 +90,7 @@ image
 #### 1.4 Evaluation of model:
 * Validation loss (binary_crossentropy).
 * Validation accuracy.
+* Confusion Matrix for the label named Competition.
 ```python
 loss, accuracy = model.evaluate(X_val, y_val)
 ```
@@ -115,8 +116,8 @@ loss, accuracy = model.evaluate(X_val, y_val)
 ```python
 def extract_with_regex(text):
     patterns = [
-        r"\\b(?:CompetitorX|CompetitorY|CompetitorZ)\\b",  # Competitors
-        r"\\b(?:analytics|AI engine|data pipeline)\\b",    # Features
+        r"\\b(?:CompetitorX|CompetitorY|CompetitorZ)\\b",  
+        r"\\b(?:analytics|AI engine|data pipeline)\\b",    
     ]
 ```
 
@@ -126,6 +127,7 @@ def extract_with_regex(text):
 
 
 ### TASK_3:
+
 
 
 
