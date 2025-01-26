@@ -99,7 +99,8 @@ loss, accuracy = model.evaluate(X_val, y_val)
 ### TASK_2:
 
 #### Entity/Keyword Extraction 
-* The entitie sof the labels are extracted.
+* The entities of the labels are extracted.
+  
 * domain_knowledge.json:
 ```json
 {
@@ -109,6 +110,7 @@ loss, accuracy = model.evaluate(X_val, y_val)
 "security_keywords": ["SOC2 certified", "data compliance", "encryption", "privacy policy"]
 }
   ```
+
 * Using an Advanced extraction technique i.e rule-based approach using regex and recognizing patterns
 ```python
 def extract_with_regex(text):
@@ -117,8 +119,13 @@ def extract_with_regex(text):
         r"\\b(?:analytics|AI engine|data pipeline)\\b",    # Features
     ]
 ```
+
 * Combining both the approaches resulting in final set of extracted entities.
+  
 * These are further stored in the dataset called "extracted_entities_dataset".
+
+
+### TASK_3:
 
 
 
