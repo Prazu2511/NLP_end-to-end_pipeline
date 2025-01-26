@@ -87,7 +87,7 @@ history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data
 image
 
 
- Evaluation of model:
+#### 1.4 Evaluation of model:
 * Validation loss (binary_crossentropy).
 * Validation accuracy.
 ```python
