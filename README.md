@@ -85,7 +85,7 @@ history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data
 
 (vi) Cross-Validation:
 * The loss is relatively consistent across the folds, with an average loss of 0.294. This suggests the model is learning and the loss isn't varying drastically between folds.
-<img width="304" alt="image" src="https://github.com/user-attachments/assets/61265613-6bb7-4fc9-9cae-20588a434adb" />
+<img width="509" alt="Screenshot 2025-01-26 at 5 11 53 PM" src="https://github.com/user-attachments/assets/e76b42aa-a05e-450e-b996-f521c49a1c0e" />
 
 #### 1.4 Evaluation of model:
 * Validation loss (binary_crossentropy).
@@ -94,11 +94,16 @@ history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data
 ```python
 loss, accuracy = model.evaluate(X_val, y_val)
 ```
-
+* Validation_Loss:
+  
 <img width="523" alt="Screenshot 2025-01-26 at 6 16 55 PM" src="https://github.com/user-attachments/assets/e23739ea-01fe-4867-8c2f-32ab607e8b8e" />
 
+* Validation_Accuracy:
+  
 <img width="548" alt="Screenshot 2025-01-26 at 6 23 14 PM" src="https://github.com/user-attachments/assets/b66fc5dd-7871-4564-be99-98fee99eae68" />
 
+* Confusion_Matrix:
+  
 <img width="514" alt="Screenshot 2025-01-26 at 11 00 15 PM" src="https://github.com/user-attachments/assets/0b40831e-8d6a-45e1-97f6-88e4e06822c1" />
 
 
