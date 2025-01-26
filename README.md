@@ -140,10 +140,14 @@ def extract_with_regex(text):
 
 
 ### TASK_3:
-* Implemented FastAPI
-* Accepts an input text prompt.
-* Returns Predicted Labels and Extracted Entities present in the input.
-* 
+* Implemented FastAPI to accept an input text prompt which in turn returns predicted labels and extracted entities present in the given text.
+* Dockerized the entire application for ease of transported use
+#### Steps to build and run the docker container locally :
+* Clone the repository and open terminal in the root directory of the project
+* Run "docker-compose build" (prefix the command with sudo if there occurs an error regarding denial of permission)
+* Run "docker-compose up", this should start the frontend static html application on port 5500 and the api service in the backend on port 8000
+* You can use curl http://127.0.0.1:8000 to ping the backend api to check if it is working
+* Go to http://localhost:5500 or http://127.0.0.1:5500 to access the html page which prompts you to enter the text. After entering the text, please wait for sometime as the text is processed to extract entities and class labels.
 
 
 
