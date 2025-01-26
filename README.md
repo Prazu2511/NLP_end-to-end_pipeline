@@ -9,14 +9,14 @@ This project implements an end-to-end Natural Language Processing (NLP) pipeline
 
 ### TASK_1:
 
-*1.1 Data Creation:*
+#### 1.1 Data Creation:
 * Rule-based synthetic data generation approach is used in producing a dataset with 1,200 rows.
 * Multi-class labels created using where 600 rows are created by rule-based.
 * The remaining rows are augmented using “Random Swap Data Augmentation”technique to introduce variability to the data.
 * Randomized values assigned to 200 rows to reduce overfitting.
 * The final dataset was saved as “multiclass_calls_dataset_with_rand.csv”
 
-*1.2 Data Augmentation & Pre-Processing:*
+#### 1.2 Data Augmentation & Pre-Processing:
 * Random Swap Augmentation technique is over textual dataset where it aims to introduce variability into the data, while preserving it’s semantics. This creates slightly altered versions of the original text.
 ```python
 def random_swap(text, n=1):
@@ -31,10 +31,10 @@ def random_swap(text, n=1):
 * Data preprocessing techniques, involving removing of stopwords and lemmatization of the word is done just before training the model and stored in the dataset of "calls_dataset_with_preprocessed.csv"
 
 
-*1.3 Training the Model:*
+#### 1.3 Training the Model:
 * Two classification approaches were employed for multi-label classification but finally trained on Neural Network model:
     
-    ### Logistic Regression with OneVsRestClassifier:
+*Logistic Regression with OneVsRestClassifier:*
   * OneVsRestClassifier wraps around Logistic Regression to handle multi-label classification by training one logistic regression model per label but resulted in overfitting.
   
          ```python
@@ -42,7 +42,7 @@ def random_swap(text, n=1):
          model = OneVsRestClassifier(LogisticRegression(max_iter=1000, random_state=42))
          ```
   
-    ### Feed Forward Neural Network:
+*Feed Forward Neural Network:*
   
   (i) The dataset (multiclass_calls_dataset_with_rand.csv) where the text labels are converted into numerical features using TF-IDF vectorizer
   
