@@ -86,6 +86,7 @@ history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data
 
 * Cross-Validation:
     - The loss is relatively consistent across the folds, with an average loss of 0.294. This suggests the model is learning and the loss isn't varying drastically between folds.
+      
     <img width="509" alt="Screenshot 2025-01-26 at 5 11 53 PM" src="https://github.com/user-attachments/assets/e76b42aa-a05e-450e-b996-f521c49a1c0e" />
 
 #### 1.4 Evaluation of model:
