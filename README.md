@@ -118,6 +118,7 @@ def extract_with_regex(text):
     ]
 ```
 * Combining both the approaches resulting in final set of extracted entities.
+* These are further stored in the dataset called "extracted_entities_dataset".
 
 
 
